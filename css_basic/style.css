@@ -1,0 +1,39 @@
+/* Flexbox layout for the page */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body takes at least full viewport height */
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex: auto;
+}
+
+article {
+    flex: 2;
+    overflow-y: auto;
+}
+
+aside {
+    flex: 1;
+    overflow-y: auto;
+}
+
+/* Optional: Add some visual styling */
+header {
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+}
+
+article, aside {
+    padding: 20px;
+}
