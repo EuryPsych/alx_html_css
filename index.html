@@ -3,49 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALX CSS Advanced Project</title>
-    <!-- Main CSS import -->
+    <title>SmileSchool</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Google Fonts import -->
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons (if needed) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Header Section -->
     <header class="header">
-        <div class="logo">
-            <i class="fas fa-code"></i> <!-- Example icon -->
+        <div class="logo-container">
+            <a href="#" class="logo">
+                <img src="assets/images/logo.png" alt="SmileSchool Logo">
+            </a>
         </div>
-        <nav class="navbar">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#">COURSES</a></li>
+                <li class="nav-item"><a href="#">PRICING</a></li>
+                <li class="nav-item"><a href="#">LOGIN</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="main-content">
-        <section class="hero">
-            <h1>Welcome to CSS Advanced</h1>
-            <p>Implementing advanced CSS techniques</p>
-        </section>
+    <!-- Banner Section -->
+    <section class="banner">
+        <div class="banner-content">
+            <h1 class="banner-title">Get schooled</h1>
+            <div class="banner-tags">
+                <span>SMILES</span>
+                <span>GRIN</span>
+                <span>LAUGH</span>
+            </div>
+            <button class="cta-button">REGISTER FOR FREE</button>
+        </div>
 
-        <section class="features">
-            <article class="feature-card">
-                <h2>Flexbox</h2>
-                <p>Modern layout techniques</p>
-            </article>
-            <article class="feature-card">
-                <h2>Grid</h2>
-                <p>Advanced two-dimensional layouts</p>
-            </article>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <p>&copy; 2023 ALX. All rights reserved.</p>
-    </footer>
+        <div class="pros-section">
+            <h2 class="pros-title"><span>Learn</span> from the pros</h2>
+            <div class="pros-grid">
+                <div class="pro-card">
+                    <img src="assets/images/phillip.png" alt="Phillip Massey">
+                    <h3>Phillip Massey</h3>
+                    <p>Smile of the year</p>
+                </div>
+                <div class="pro-card">
+                    <img src="assets/images/nannie.png" alt="Nannie Lawrence">
+                    <h3>Nannie Lawrence</h3>
+                    <p>Best little smile</p>
+                </div>
+                <div class="pro-card">
+                    <img src="assets/images/bruce.png" alt="Bruce Walters">
+                    <h3>Bruce Walters</h3>
+                    <p>Best Friend Smile</p>
+                </div>
+                <div class="pro-card">
+                    <img src="assets/images/henry.png" alt="Henry Hughes">
+                    <h3>Henry Hughes</h3>
+                    <p>24h smiles winner</p>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
