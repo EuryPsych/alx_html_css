@@ -1,6 +1,34 @@
-/* Header Styles */
+/* ===== Global Variables ===== */
+:root {
+    --primary-color: #C271FF;
+    --secondary-color: #071629;
+    --text-color: #071629;
+    --light-text: #FFFFFF;
+    --font-main: 'Source Sans Pro', sans-serif;
+}
+
+/* ===== Base Styles ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== Header Styles ===== */
 .header {
-    background-color: #FFFFFF;
+    background-color: var(--light-text);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,7 +51,7 @@
 }
 
 .nav-item a {
-    color: #071629;
+    color: var(--secondary-color);
     text-decoration: none;
     font-weight: 600;
     font-size: 12px;
@@ -31,10 +59,10 @@
     text-transform: uppercase;
 }
 
-/* Banner Styles */
+/* ===== Banner Styles ===== */
 .banner {
-    background-color: #071629;
-    color: #FFFFFF;
+    background-color: var(--secondary-color);
+    color: var(--light-text);
     text-align: center;
     padding: 200px 0 100px;
     margin-top: 70px;
@@ -61,8 +89,8 @@
 }
 
 .cta-button {
-    background-color: #C271FF;
-    color: #FFFFFF;
+    background-color: var(--primary-color);
+    color: var(--light-text);
     border: none;
     border-radius: 22px;
     padding: 12px 30px;
@@ -73,13 +101,13 @@
 }
 
 .cta-button:hover {
-    background-color: #9B51E0;
+    opacity: 0.9;
 }
 
-/* Pros Section */
+/* ===== Pros Section ===== */
 .pros-section {
-    background-color: #FFFFFF;
-    color: #071629;
+    background-color: var(--light-text);
+    color: var(--text-color);
     padding: 80px 0;
     margin-top: -50px;
 }
@@ -91,15 +119,13 @@
 }
 
 .pros-title span {
-    color: #C271FF;
+    color: var(--primary-color);
 }
 
 .pros-grid {
     display: flex;
     justify-content: center;
     gap: 60px;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .pro-card {
@@ -121,11 +147,79 @@
 
 .pro-card p {
     font-size: 14px;
-    color: #C271FF;
+    color: var(--primary-color);
     font-style: italic;
 }
 
-/* Responsive Design */
+/* ===== Quotes Section ===== */
+.quotes-section {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    padding: 100px 0;
+    text-align: center;
+}
+
+.quote-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.quote-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.quote-content {
+    text-align: left;
+}
+
+.quote-text {
+    font-size: 22px;
+    line-height: 1.5;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.quote-text::before,
+.quote-text::after {
+    content: '“';
+    font-size: 60px;
+    color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+}
+
+.quote-text::before {
+    top: -30px;
+    left: -40px;
+}
+
+.quote-text::after {
+    content: '”';
+    bottom: -50px;
+    right: -40px;
+}
+
+.author-name {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.author-title {
+    font-size: 14px;
+    opacity: 0.7;
+    font-style: italic;
+}
+
+/* ===== Responsive Design ===== */
 @media (max-width: 768px) {
     .header {
         padding: 20px 30px;
@@ -148,5 +242,31 @@
         flex-direction: column;
         align-items: center;
         gap: 40px;
+    }
+    
+    .quote-card {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .quote-content {
+        text-align: center;
+    }
+    
+    .quote-text {
+        font-size: 18px;
+    }
+    
+    .quote-text::before,
+    .quote-text::after {
+        font-size: 40px;
+    }
+    
+    .quote-text::before {
+        left: -20px;
+    }
+    
+    .quote-text::after {
+        right: -20px;
     }
 }
